@@ -78,7 +78,15 @@ Check for http://www.krizka.net/2009/12/27/starting-mindstorm-nxt-2-0-developmen
 
 
 
-## Troubleshooting
+## Additional
+### gcc 4.4
+gcc 4.4 can be installed using the AUR, it has a bunch of dependencies so install them first. I used: 
+1. https://aur.archlinux.org/packages/isl17/
+2. https://aur.archlinux.org/packages/osl/
+3. https://aur.archlinux.org/packages/cloog/
+4. https://aur.archlinux.org/packages/gcc49-multilib/ (or just gcc49)
+<a/>
+It might be possible to compile the toolchain using gcc49 (not tested), but would eliminate the need to install gcc 4.4 as well.
 ### texinfo 4.13
 Newer version of texinfo (i.e. those in the official repo) are not compatible and will cause and error. 
 If this occurs you will need to use a earlier version of texinfo (4.13 is known to work).
