@@ -1,0 +1,25 @@
+CC=gcc
+LD=gcc
+CFLAGS=-D_NXT_LITTLE_ENDIAN -g -std=gnu99 -Wall
+LDFLAGS=-lusb
+
+all: fwflash fwexec
+
+flash_routine.h: flash_routine.h.base make_flash_header.py
+	python2.7 make_flash_header.py
+
+main_%.o: main_%.c
+
+%.o: %.c flash_routine.h
+	$(CC) -fPIC $(CFLAGS) -c -o $@ $<
+
+libnxt.a: error.o firmware.o flash.o lowlevel.o samba.o
+	ar cq $@ $^
+
+%: main_%.o libnxt.a
+	$(LD) -o $@ $(LDFLAGS) $^
+
+clean:
+	$(RM) *.o *.a flash_routine.h
+
+.PHONY: clean all
