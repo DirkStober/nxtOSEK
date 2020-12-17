@@ -8,5 +8,20 @@ This repository includes the scripts that I used to create a compiler toolchain 
 * texinfo 4.13 (See texinfo section for downgrading)
 
 ### Installation
-Use the script build_arm_toolchain.sh
+Use the script build_arm_toolchain.sh, which will:
+* create SRC, BUILD and GNUARM directories in the current directory
+* download sources of binutils, gcc, newlib 
+* compile them in place with the right options
+To test the new gcc use:
+```console
+$./gnuarm/bin/arm-elf-gcc -print-multi-lib
+.;
+thumb;@mthumb
+fpu;@mhard-float
+interwork;@mthumb-interwork
+fpu/interwork;@mhard-float@mthumb-interwork
+thumb/interwork;@mthumb@mthumb-interwork
+```
+
+
 
