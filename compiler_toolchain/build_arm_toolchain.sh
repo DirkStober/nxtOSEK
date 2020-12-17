@@ -31,10 +31,14 @@
 # Updated the gcc version to 4-6
 # Fixed link to binutils-2.20.1.tar.bz2
 
+# Dec 16 2020
+# Changed the gcc version to 4-4
+# Fixed link to newlib-1.18.0.tar.gz
 
 
 ##################################################################
 # set the right compiler
+#	-change to gcc4-4 on manjaro 20.2 
 #	-change to gcc4-6 on ubuntu 11.10
 #	-change to gcc4-4 on ubuntu 9.10
 #	-change to gcc4-2 on ubuntu 8.10 (gcc4-3 not working)
