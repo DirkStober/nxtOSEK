@@ -1,7 +1,7 @@
 # nxtOSEK setup instructions for arch linux
 This repository includes the scripts that I used to create a compiler toolchain to flash NXT mindstorms with nxtOSEK. The instructions are based on (http://lejos-osek.sourceforge.net/installation_linux.htm)
 
-## 1. GNU arm compiler
+## 1. Build and Install GNU ARM 
 
 ### Requirements
 * gcc 4.4 (other 4.x versions might also work (not 4.3 though))
@@ -26,10 +26,34 @@ fpu/interwork;@mhard-float@mthumb-interwork
 thumb/interwork;@mthumb@mthumb-interwork
 ```
 
+## 2. Set up nxtOSEK
+
+
+* install wine (in official repo) as sg.exe will nee it
+* Download: http://downloads.sourceforge.net/project/lejos-osek/nxtOSEK/nxtOSEK_v213.zip
+* Put sg.ext into "/toppers_osek/sg/" 
+* Adjust ecrobot/tool_gcc.mak:
+	* Change GNUARM_ROOT to point to the gnu arm binary directory
+	* Change "-Winline" to "-Wno-inline" in CFLAGS and CXXFLAGS to get rid of inline warnings
+* Adjust ecrobot/ecrobot.mak: 
+	* Change WINECONSOLE to "wine" instead of "wineconsole" to prevent X window from opening
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 ## Troubleshooting
 ### texinfo 4.13
 Newer version of texinfo (i.e. those in the official repo) are not compatible and will cause and error. 
-If this occurs you will need to use a earlier version of texinfo (4.13 is known to work)
+If this occurs you will need to use a earlier version of texinfo (4.13 is known to work).
 Installation from (https://askubuntu.com/questions/491184/texinfo-downgrade)):
 1. Download the texinfo 4.13 source:
 ```console
