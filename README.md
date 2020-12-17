@@ -12,6 +12,7 @@ Use the script build_arm_toolchain.sh, which will:
 * create SRC, BUILD and GNUARM directories in the current directory
 * download sources of binutils, gcc, newlib (check that the links still work!) 
 * compile them in place with the right options
+#End List
 To test the new gcc use the output should show (hard and soft float support):
 ```console
 ~$ ./gnuarm/bin/arm-elf-gcc -print-multi-lib
@@ -22,6 +23,8 @@ interwork;@mthumb-interwork
 fpu/interwork;@mhard-float@mthumb-interwork
 thumb/interwork;@mthumb@mthumb-interwork
 ```
+
+## Troubleshooting
 ### texinfo 4.13
 Newer version of texinfo (i.e. those in the official repo) are not compatible and will cause and error. 
 If this occurs (from (https://askubuntu.com/questions/491184/texinfo-downgrade)):
