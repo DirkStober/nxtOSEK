@@ -29,7 +29,8 @@ thumb/interwork;@mthumb@mthumb-interwork
 ## Troubleshooting
 ### texinfo 4.13
 Newer version of texinfo (i.e. those in the official repo) are not compatible and will cause and error. 
-If this occurs (from (https://askubuntu.com/questions/491184/texinfo-downgrade)):
+If this occurs you will need to use a earlier version of texinfo (4.13 is known to work)
+Installation from (https://askubuntu.com/questions/491184/texinfo-downgrade)):
 1. Download the texinfo 4.13 source:
 ```console
 ~$ wget http://ftp.gnu.org/gnu/texinfo/texinfo-4.13.tar.gz
