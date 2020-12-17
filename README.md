@@ -85,7 +85,9 @@ gcc 4.4 can be installed using the AUR, it has a bunch of dependencies so instal
 2. https://aur.archlinux.org/packages/osl/
 3. https://aur.archlinux.org/packages/cloog/
 4. https://aur.archlinux.org/packages/gcc49-multilib/ (or just gcc49)
-<a/>
+
+[//]:# (endlist)
+
 It might be possible to compile the toolchain using gcc49 (not tested), but would eliminate the need to install gcc 4.4 as well.
 ### texinfo 4.13
 Newer version of texinfo (i.e. those in the official repo) are not compatible and will cause and error. 
