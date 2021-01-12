@@ -45,7 +45,7 @@ thumb/interwork;@mthumb@mthumb-interwork
 Should generate a binary executable (helloworld.rxe) and other scripts without error.
  
 
-##3. Firmware Upload	
+## 3. Firmware Upload	
 1. Download libnxt from (https://github.com/rvs/libnxt)
 2. You can use scons to build the library but it is easier to use the "Makefile-libnxt) from (http://www.it.uu.se/katalog/marst984/nxt/Makefile-libnxt%20). 
 The python file is written in python 2 so change line 9 to run the python file with python2.x (not working with python 3.x).
